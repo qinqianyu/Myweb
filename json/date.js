@@ -1,4 +1,4 @@
-val jasondata={
+var jasondata={
   "nodes": [
     {
       "name": "小米",
@@ -93,4 +93,4 @@ val jasondata={
       "target": "00002"
     }
   ]
-}
+};
