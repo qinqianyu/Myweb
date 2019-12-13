@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8"/>
     <title>首页</title>
-    <link href="/static/css/layui.css" rel="stylesheet" type="text/css"/>
-    <link href="/static/css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="../static/css/layui.css" rel="stylesheet" type="text/css"/>
+    <link href="../static/css/main.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <form>
@@ -14,19 +14,17 @@
     <input id="getAll_btn4" type="button" value="获取路径"/>
 </form>
 <svg></svg>
-<script src="/static/plugins/jquery-3.2.1.min.js" type="text/javascript"></script>
-<script src="/static/plugins/d3.js" type="text/javascript"></script>
-<script src="/json/date.js" type="text/javascript"></script>
+<script src="../static/plugins/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="../static/plugins/d3.js" type="text/javascript"></script>
 <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://d3js.org/d3.v5.min.js"></script>-->
 <script>
-
     $(function () {
         $("#getAll_btn").on("click", function () {
             $("svg").children().remove();// 删除 已经在 DOM 中渲染的元素
             $.ajax({
                 type: "GET",
-                url: "/resources/json/date.json",
+                url: "/Myweb/json/date.json",
                 //data:{},
                 dataType: "json",
                 success: function (result) {
