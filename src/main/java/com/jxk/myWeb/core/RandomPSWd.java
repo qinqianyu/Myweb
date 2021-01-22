@@ -4,28 +4,31 @@ import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
+/**
+ * @author jxk
+ */
 @Component
 public class RandomPSWd {
 
     public String noSymbol(int length) {
-        String rtnstr = "";
+        StringBuilder rtnstr = new StringBuilder();
         for (int i = 0; i < length; i++) {
             Random random = new Random();
             switch (random.nextInt(3)) {
                 case 0:
-                    rtnstr += (char) (Math.random() * 26 + 'A');
+                    rtnstr.append((char) (Math.random() * 26 + 'A'));
                     break;
                 case 1:
-                    rtnstr += (char) (Math.random() * 26 + 'a');
+                    rtnstr.append((char) (Math.random() * 26 + 'a'));
                     break;
                 case 2:
-                    rtnstr += String.valueOf((int) (Math.random() * 10));
+                    rtnstr.append((int) (Math.random() * 10));
                     break;
                 default:
                     break;
             }
         }
-        return rtnstr;
+        return rtnstr.toString();
     }
 
     /**

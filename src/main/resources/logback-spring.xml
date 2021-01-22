@@ -125,4 +125,10 @@
             <appender-ref ref="STDOUT"/>
         </root>
     </springProfile>
+    <!--开发环境配置-->
+    <springProfile name="dev1">
+        <root level="INFO">
+            <appender-ref ref="STDOUT"/>
+        </root>
+    </springProfile>
 </configuration>
